@@ -34,15 +34,16 @@ function Account() {
         alt=""
         className="h-full w-full object-cover absolute "
       />
-      <div className="text-white bg-black/40 z-50 w-[80%] h-[70%] md:h-[80%] md:w-[90%] rounded   grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3  p-4 overflow-y-auto ">
+      <div className="text-white bg-black/50 z-50 w-[80%] h-[70%] md:h-[80%] md:w-[90%] rounded   grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5  p-4 overflow-y-auto ">
         {/* {console.log(movies)} */}
         {movies?.map((movie) => {
           return (
             <div
-              className=" text-white h-[200px] rounded  relative cursor-pointer transition-all duration-400 group"
+              className=" text-white h-[250px] rounded  relative cursor-pointer transition-all duration-400 group"
               key={movie.id}
             >
               <img
+                className="w-full h-full object-cover"
                 src={`https://image.tmdb.org/t/p/w500/${movie?.img}`}
                 alt={movie?.title}
               />
@@ -50,7 +51,7 @@ function Account() {
                 onClick={() => deleteShow(movie.id)}
                 className=" absolute right-2 top-2  hover:text-red-600 text-2xl opacity-0 transition-all duration-700 group-hover:opacity-100  text-white"
               />
-              <div className=" absolute w-full h-[20%] bg-gradient-to-t group-hover:h-[25%] transition-all duration-300 from-white via-white/50 to-white/0  z-50 bottom-0 left-0 flex justify-start items-end ">
+              <div className=" absolute w-full h-[20%] bg-gradient-to-t group-hover:h-[25%] transition-all duration-300 from-white via-white/50 to-white/0  z-50 bottom-0 left-0 flex items-end ">
                 <p className="text-sm text-black font-semibold">
                   {movie?.title}
                 </p>

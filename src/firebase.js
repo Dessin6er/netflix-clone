@@ -7,12 +7,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBMvR5PHvZjUDWZhTV6HhjdZmBubNsu1ls",
-  authDomain: "netflix-clone-8eb21.firebaseapp.com",
-  projectId: "netflix-clone-8eb21",
-  storageBucket: "netflix-clone-8eb21.appspot.com",
-  messagingSenderId: "274027028760",
-  appId: "1:274027028760:web:a19653a3dc03efc402fe6d",
+  apiKey: import.meta.env.VITE_FIREBASE_API_kEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
 // Initialize Firebase
